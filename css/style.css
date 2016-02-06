@@ -1,0 +1,503 @@
+@font-face {
+  font-family: mainFont;
+  src: url(../fonts/BebasNeue_Bold.ttf);
+}
+
+body {
+  background-image: url("../img/bg.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: 100px;
+  background-color: #1abc9c;
+  color: #666666;
+  font-family: mainFont, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Pen Title */
+.pen-title {
+  padding: 50px 0;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.pen-title h1 {
+  margin: 0 0 20px;
+  font-size: 48px;
+  font-weight: 300;
+}
+.pen-title span {
+  font-size: 12px;
+}
+.pen-title span .fa {
+  color: #33b5e5;
+}
+.pen-title span a {
+  color: #33b5e5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.panel {
+  position: relative;
+  opacity: 0.9;
+  background: #34495e;
+  max-width: 500px;
+  width: 100%;
+  border-top: 5px solid #2ecc71;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  margin-top: 8%;
+  text-align: center;
+}
+
+.panel a {
+  text-decoration:none;
+}
+
+a:-webkit-any-link {
+  color: white;
+}
+
+/* Form Module */
+.form-module {
+  position: relative;
+  opacity: 0.9;
+  background: #34495e;
+  max-width: 320px;
+  width: 100%;
+  border-top: 5px solid #2ecc71;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  margin-top: 8%;
+}
+
+.searchTable {
+    position: relative;
+    opacity: 0.9;
+    background: #34495e;
+    max-width: 500px;
+    width: auto;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+.searchTable td {
+    color: #2ecc71;
+}
+
+.searchTable h2 {
+    margin: 0 0 20px;
+    color: #f1c40f;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.form-module .toggle {
+  cursor: pointer;
+  position: absolute;
+  top: -0;
+  right: -0;
+  background: #2ecc71;
+  width: 30px;
+  height: 30px;
+  margin: -5px 0 0;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
+}
+.form-module .toggle .tooltip {
+  position: absolute;
+  display: block;
+  background: rgba(0, 0, 0, 0.6);
+  width: auto;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.form-module .toggle .tooltip:before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: -5px;
+  display: block;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid rgba(0, 0, 0, 0.6);
+}
+.form-module .form {
+  display: none;
+  padding: 40px;
+}
+.form-module .form:nth-child(2){
+  display: block;
+}
+
+.form-module h2 {
+  margin: 0 0 20px;
+  color: #f1c40f;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1;
+}
+.form-module input, select {
+  outline: none;
+  display: block;
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  margin: 0 0 20px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  font-family: mainFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.form-module input:focus, select:focus {
+  border: 1px solid #33b5e5;
+  color: #333333;
+}
+button {
+  cursor: pointer;
+  background: #2ecc71;
+  width: 100%;
+  border: 0;
+  font-family: mainFont, sans-serif;
+  font-size: 20px;
+  padding: 10px 15px;
+  color: #ffffff;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+
+button:hover {
+  background: #27ae60;
+}
+.form-module .cta {
+  background: #ecf0f1;
+  width: 100%;
+  padding: 15px 40px;
+  box-sizing: border-box;
+  color: #666666;
+  font-size: 14px;
+  text-align: center;
+}
+.form-module .cta a {
+  color: #333333;
+  text-decoration: none;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.wrapper .tooltips {
+  background: #1496bb;
+  bottom: 100%;
+  color: #fff;
+  display: block;
+  left: -25px;
+  margin-bottom: 15px;
+  opacity: 0;
+  padding: 20px;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -o-transform: translateY(10px);
+  transform: translateY(10px);
+  -webkit-transition: all .25s ease-out;
+  -moz-transition: all .25s ease-out;
+  -ms-transition: all .25s ease-out;
+  -o-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+}
+
+/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+.wrapper .tooltips:before {
+  bottom: -20px;
+  content: " ";
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+/* CSS Triangles - see Trevor's post */
+.wrapper .tooltips:after {
+  border-left: solid transparent 10px;
+  border-right: solid transparent 10px;
+  border-top: solid #1496bb 10px;
+  bottom: -10px;
+  content: " ";
+  height: 0;
+  left: 50%;
+  margin-left: -13px;
+  position: absolute;
+  width: 0;
+}
+
+.wrapper:hover .tooltips {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+/* IE can just show/hide with no transition */
+.lte8 .wrapper .tooltips {
+  display: none;
+}
+
+.lte8 .wrapper:hover .tooltips {
+  display: block;
+}
+
+.nav {
+  font-family: mainFont, sans-serif;
+}
+
+.nav ul {
+  list-style: none;
+  background-color: #34495e;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  height: 50px;
+}
+
+.nav img {
+  position: absolute;
+  left: 2%;
+  top: 5px;
+  height: 50px;
+  max-width:100%;
+}
+.nav li {
+  font-family: mainFont, sans-serif;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.nav a:hover {
+  background-color: #005f5f;
+}
+
+.nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
+
+@media screen and (min-width: 600px) {
+  .nav li {
+    border-bottom: none;
+    line-height: 50px;
+    font-size: 30px;
+    display: inline-block;
+    margin-right: -4px;
+    margin-top: -9px;
+  }
+}
+
+@media only screen and (max-width : 874px) {
+  .nav img {
+    display: none;
+  }
+}
+
+.select-style {
+  margin: 0;
+  background: #fff url("../img/arrowdown.png") no-repeat 100% 50%;
+  background-size: contain;
+}
+
+.select-style select {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.logo img {
+  height: 40px;
+}
+
+table {
+  margin: auto;
+  font-size: 23px;
+  width: 100%;
+  text-align: center;
+}
+
+td {
+  color: #1abc9c;
+}
+
+.labelTD {
+  color: white;
+  top: 50%;
+  bottom: 50%;
+}
+
+.dataTD {
+  color: aqua;
+}
+
+.successFilterLbl {
+  font-size: 40px;
+  color: gold;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.filterLbl {
+  font-size: 25px;
+  color : #00f4e6;
+  padding: 1px;
+}
+
+.successLbl {
+  font-size: 40px;
+  color: gold;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.errorLbl {
+  font-size: 40px;
+  color: red;
+  margin-top: 15px;
+  margin-bottom: 35px;
+}
+
+.passLbl {
+  font-size: 25px;
+  color : #18f400;
+  padding: 5px;
+}
+
+.lateMembers {
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #34495e;
+  width: 320px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  opacity: 0.9;
+}
+
+.lateMembers table {
+  text-align: center;
+}
+
+.lateMembers th {
+  color: gold;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+.lateMembers th:hover {
+  font-size: 35px;
+}
+
+.lateMembers td{
+
+  padding-bottom: 8px;
+  font-size: 23px;
+}
+
+.lateMembers a {
+  text-decoration : none;
+  color: #1abc9c;
+}
+
+.lateMembers a:hover {
+  color: #2ecc71;
+  font-size: 27px;
+}
+
+#myDiagram {
+  background-color: #1abc9c;
+  display: inline-block;
+  border: solid 0 #2ecc71;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+}
+
+table tr.tableHeader td{
+  font-size: 28px;
+  height: 40px;
+  color: gold;
+}
+
+.userInfo {
+  background-color: gold;
+  height: 130px;
+  text-align: center;
+}
+
+.userInfo .userInfoDetails {
+  font-size: 25px;
+  color: #34495e;
+  padding-top: 10px;
+}
+
+.userInfo h1{
+  padding-top: 7px;
+  font-size: 35px;
+  color: #2c3e50;
+}
+
+#editMe, #fNameSort, #lNameSort {
+  cursor: pointer;
+}
+
+.emailEdit, .fNameEdit, .lNameEdit, .dobEdit, .nationEdit {
+  display: inline;
+  cursor: pointer;
+  padding-bottom: 14px;
+}
+
+.dummyEdit {
+  display: inline-block;
+}
+
+
+.userInfoDetails td {
+  color: #34495e;
+}
